@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Sistema</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    label {
+      color: #E0E0E0;
+    }
+
+    .form-control {
+      background-color: #2C2C2C;
+    }
+
+    h4 {
+      color: #E0E0E0;
+    }
+
+    .form-control::placeholder {
+      color: #e0e0e048;
+    }
+
+    .form-control:focus {
+      background-color: #2C2C2C;
+    }
+  </style>
+</head>
+
+<body style="background-color: #121212;">
+  <div class="container vh-100 d-flex justify-content-center align-items-center">
+    <div class="card shadow p-4" style="max-width: 400px; width: 100%; background-color: #2C2C2C;">
+      <img src="imagens/icone.png" class="card-img-top mx-auto d-block" style="width: 70px; height: auto; margin: 20px 0px;">
+      <h4 class="text-center mb-4" style="font-weight: bold; margin-bottom: 200px;">Login Administrativo</h4>
+      <form action="painel.html">
+        <div class="mb-3">
+          <label for="usuario" class="form-label" style="font-weight: bold; margin-bottom: 5px;">Usuário</label>
+          <input type="text" style="color: white;" class="form-control" id="usuario" placeholder="Digite seu usuário" required>
+        </div>
+        <div class="mb-3">
+          <label for="senha" class="form-label" style="font-weight: bold; margin-bottom: 5px;">Senha</label>
+          <input type="password" style="color: white;" class="form-control" id="senha" placeholder="Digite sua senha" required>
+        </div>
+        <button type="submit" style="background-color: #2C2C2C; margin-top: 5px;" class="btn btn-outline-primary w-100">Entrar</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

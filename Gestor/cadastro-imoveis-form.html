@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Imóvel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<style>
+  label {
+    color: white;
+  }
+
+  .form-control {
+    background-color: #2C2C2C;
+    color: aliceblue;
+  }
+
+  .form-control:focus {
+    background-color: #2C2C2C;
+  }
+
+  .form-select {
+    background-color: #2C2C2C;
+    color: white;
+  }
+
+  /* Estilo apenas para os campos específicos */
+  input[type="text"],
+  textarea {
+    color: #ffffff !important;
+  }
+
+  .form-control::placeholder {
+    color: #e0e0e048;
+  }
+
+  .navbar {
+    height: 80px;
+  }
+
+  li {
+    font-size: 20px;
+  }
+
+  .navbar-brand {
+    font-size: 25px;
+  }
+</style>
+
+<body style="background-color: #121212;">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="painel.html">Painel Gestor</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="painel.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link active" href="imoveis.html">Imóveis</a></li>
+          <li class="nav-item"><a class="nav-link" href="solicitacoes.html">Solicitações</a></li>
+          <li class="nav-item"><a class="nav-link" href="contratos.html">Contratos</a></li>
+          <li class="nav-item"><a class="nav-link text-danger" href="login.html">Sair</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container vh-100 d-flex justify-content-center align-items-center">
+    <div class="card shadow p-4" style="max-width: 1000px; width: 100%; background-color: #2C2C2C;">
+      <img src="imagens/cadastro.png" class="card-img-top mx-auto d-block" style="width: 90px; height: auto; margin: 20px 0px;">
+      <h3 class="mb-4" style="color: white; text-align: center;">Cadastro de Imóvel</h3>
+      <br>
+      <form>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label class="form-label">Título</label>
+            <input type="text" placeholder="Casa Moderna" class="form-control" required>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Tipo</label>
+            <select class="form-select">
+              <option>Casa</option>
+              <option>Apartamento</option>
+              <option>Terreno</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Status</label>
+            <select class="form-select">
+              <option>Disponível</option>
+              <option>Alugado</option>
+              <option>Vendido</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Descrição</label>
+          <textarea class="form-control" rows="1" placeholder="3 quartos, 2 banheiros, 1 cozinha, 1 sala de estar, 1 garagem, 1 área de fundo"></textarea>
+        </div>
+
+        <div class="col-md-12">
+          <label class="form-label">Metragem</label>
+          <input type="text" class="form-control" placeholder="450m²">
+        </div>
+
+        <br>
+
+        <div class="row mb-3">
+          <div class="col-md-4">
+            <label class="form-label">Preço</label>
+            <input type="text" class="form-control" placeholder="R$ 4.500,00">
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">CEP</label>
+            <input type="text" placeholder="15385-000" class="form-control" maxlength="9" pattern="\d{9}" required>
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">Bairro</label>
+            <input type="text" placeholder="Zonar Norte" class="form-control">
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">Rua</label>
+            <input type="text" placeholder="Passio Itamarati" class="form-control">
+          </div>
+
+          <div class="col-md-2">
+            <label class="form-label">Número</label>
+            <input type="text" placeholder="312" class="form-control" maxlength="5" pattern="\d+" required>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Complemento</label>
+            <input type="text" class="form-control">
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Fotos</label>
+          <input type="file" class="form-control" multiple>
+        </div>
+
+        <button type="submit" class="btn btn-success">Salvar</button>
+        <a href="imoveis.html" class="btn btn-secondary">Cancelar</a>
+      </form>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
